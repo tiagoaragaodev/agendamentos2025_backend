@@ -25,7 +25,7 @@ const UsuarioControle = {
   async getProfissional(req, res) {
     try {
       const usuarios = await Usuario.find({ tipo: "profissional" });
-      return res.status(201).json(usuarios[0]);
+      return res.status(200).json(usuarios);
     } catch (error) {
       return res
         .status(500)
@@ -35,7 +35,7 @@ const UsuarioControle = {
   async getCliente(req, res) {
     try {
       const usuarios = await Usuario.find({ tipo: "cliente" });
-      return res.status(201).json(usuarios[0]);
+      return res.status(200).json(usuarios);
     } catch (error) {
       return res
         .status(500)

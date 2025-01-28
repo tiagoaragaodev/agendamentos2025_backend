@@ -11,7 +11,7 @@ const agendamentoSchema = new mongoose.Schema({
     ref: "Usuario",
     required: true,
   },
-  data: { type: Date, required: true },
+  data: { type: String, required: true },
   criadoEm: { type: Date, default: Date.now },
 });
 

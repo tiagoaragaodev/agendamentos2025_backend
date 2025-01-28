@@ -17,7 +17,7 @@ const AgendamentoControle = {
       const agendamentos = await Agendamento.find()
         .populate("clienteId", "nome endereco")
         .populate("profissionalId", "nome");
-      return res.status(201).json(agendamentos[0]);
+      return res.status(201).json(agendamentos);
     } catch (error) {
       return res.status(500).json({ error: error.message });
     }
