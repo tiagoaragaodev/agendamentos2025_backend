@@ -11,7 +11,12 @@ const agendamentoSchema = new mongoose.Schema({
     ref: "Usuario",
     required: true,
   },
-  data: { type: String, required: true },
+  servicoId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Servico",
+    required: true,
+  },
+  dataHora: { type: Date, required: true, unique: true },
   criadoEm: { type: Date, default: Date.now },
 });
 
